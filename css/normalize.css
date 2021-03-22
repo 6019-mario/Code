@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+ul, li{
+	font-size:30px;
+	list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+th{
+	font-size: 20px;
+}
+.formular{
+	text-align: center;
+		padding: 10px;
+}
+.formular li {
+	font-size: 20px;
+}

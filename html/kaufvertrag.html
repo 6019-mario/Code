@@ -1,0 +1,247 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+     <link rel="stylesheet" type="text/css" href="../css/Kaufvertrag.css">
+
+    <script>
+   
+function my_fun(str) {
+
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else{
+        xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange= function(){
+        if (this.readyState==4 && this.status==200) {
+            document.getElementById('poll').innerHTML = this.responseText;
+        }
+    }
+    xmlhttp.open("GET","../kaufvertrag.php?value="+str, true);
+    xmlhttp.send();
+
+}
+
+</script>
+
+</head>
+
+
+
+<body>
+
+
+<h1>
+    <lable>
+        <a class="logo" href="../index.html">
+            <img src="../bilder/Autologo.png" height="70">
+        </a>
+    </lable>Kaufvertrag
+</h1>
+<h2>Verkäufer</h2>
+
+<form>
+            <label for="person">Herr/Frau:</label>
+            <input type="text" id="person" name="person">
+            <br></br>
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse">
+            <label for="plz">PLZ:</label>
+            <input type="text" id="plz" name="plz">
+            <label for="ort">Ort:</label>
+            <input type="text" id="ort" name="ort">
+</form>
+
+<h2>Käufer</h2>
+
+<form>
+            <label for="person">Herr/Frau:</label>
+            <input type="text" id="person" name="person">
+            <br></br>
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse">
+            <label for="plz">PLZ:</label>
+            <input type="text" id="plz" name="plz">
+            <label for="ort">Ort:</label>
+            <input type="text" id="ort" name="ort">
+</form>
+
+<h2>Fahrzeug</h2>
+
+
+    <label for="marke">Marke:</label>  
+    <select id="SelectA" onchange="my_fun(this.value);">
+    <option value="MarkeAuswaehlen">Marke Auswählen</option>
+        
+           
+            <option value="1">Volkswagen</option>
+            <option value="2">BMW</option>
+            <option value="3">Audi</option>
+            <option value="4">Mercedes-Benz</option>
+            <option value="5">Skoda</option>
+            <option value="6">Ford</option>
+            <option value="Abarth">Abarth</option>      
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Bentley">Bentley</option>
+            <option value="Bugatti">Bugattti</option>
+            <option value="Cadillac">Cadillac</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Citroen">Citroen</option>
+            <option value="Cupra">Cupra</option>
+            <option value="Dacia">Dacia</option>
+            <option value="DSAutomobiles">DS Automobiles</option>
+            <option value="eGoMobile">e.Go Mobile</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Honda">Honda</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Isuzu">Isuzu</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Kia">Kia</option>
+            <option value="Koenigsegg">Königsegg</option>
+            <option value="Lada">Lada</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="Lexus">Lexus</option>
+            <option value="Lotus">Lotus</option>
+            <option value="Maserati">Maserati</option>
+            <option value="Mazda">Mazda</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Micro">Micro</option>
+            <option value="Mini">MINI</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Opel">Opel</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Renault">Renault</option>
+            <option value="Seat">Seat</option>
+            <option value="smart">smart</option>
+            <option value="SsangYong">SsangYong</option>
+            <option value="Subaru">Subaru</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Volvo">Volvo</option>
+        </select>
+        <br></br>
+
+        <label for="marke">Modell:</label>
+        <div id="poll">
+        
+        <select>
+            <option>Modell zu diesem Auto</option>
+        </select>
+        </div>
+        <br>
+        <div>Baujahr: 
+            <select>
+                <option>Beliebig</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+                <option>2005</option>
+                <option>2004</option>
+                <option>2003</option>
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>1996</option>
+                <option>1995</option>
+                <option>1994</option>
+                <option>1993</option>
+                <option>1992</option>
+                <option>1991</option>
+                <option>1990</option>
+                <option>1989</option>
+                <option>1988</option>
+                <option>1987</option>
+                <option>1986</option>
+                <option>1985</option>
+                <option>1984</option>
+                <option>1983</option>
+                <option>1982</option>
+                <option>1981</option>
+                <option>1980</option>
+            </select>
+        </div>
+
+        <form action="">
+            <label for="fahrzeugidentifikationsnummer">Fahrzeugidentifikationsnummer:</label>
+            <input type="text" id="fahrzeugidentifikationsnummer" name="fahrzeugidentifikationsnummer">
+            <br>
+            <label for="motortype">Motortype:</label>
+            <input type="text" id="motortype" name="motortype">
+        </form>
+
+        <p>Datum der Übergabe:</p>
+
+         <form action="">
+            <label for="kaufpreis">Kaufpreis:</label>
+            <input type="text" id="kaufpreis" name="kaufpreis">
+            <label for="zahlungstermin">Zahlungstermin:</label>
+            <input type="text" id="zahlungstermin" name="zahlungstermin">
+            <label for="anzahlung">Anzahlung:</label>
+            <input type="text" id="anzahlung" name="anzahlung">
+        </form>
+
+        <p>Erklärung des Verkäufers: </p>
+
+        <div>
+            <input type="checkbox" id="nr1" name="nr1">
+            <label>Käufer und Verkäufer vereinbaren den Ausschluss der Garantie und Gewährleistung.</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr2" name="nr2">
+            <label>Die Vertragsparteien vereinbaren den Ausschluss der Anfechtung wegen Verkürzung über die Hälfte.</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr3" name="nr3">
+            <label>Alle genehmigungspflichtigen Änderungen am Fahrzeug sind in den Fahrzeugdokumenten* eingetragen</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr4" name="nr4">
+            <label>Die Richtigkeit des oben genannten Kilometerstandes wird garantiert.</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr5" name="nr5">
+            <label>Die Vorschadenfreiheit kann nicht garantiert werden.</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr6" name="nr6">
+            <label>Das Fahrzeug befindet sich nicht in einem verkehrs- und betriebssicheren Zustand.</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr7" name="nr7">
+            <label>Die Fahrzeugidentifizierungsnummer und Motortype sind vollständig und richtig.</label>
+        </div>
+        <div>
+            <input type="checkbox" id="nr8" name="nr8">
+            <label>Das Fahrzeug wird abgemeldet und alle notwendigen Unterlagen werden dem Käufer übergeben.</label>
+        </div>
+        
+
+        <br>
+         <input type="button" value="Kaufvertrag drucken" onClick="javascript:window.print()">
+</body>
+</html>
